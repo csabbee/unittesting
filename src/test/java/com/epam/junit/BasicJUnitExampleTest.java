@@ -28,8 +28,9 @@ public class BasicJUnitExampleTest {
     public void testBadAnswerShouldThrowExceptionWhenInputEqualsUltimateAnswer(){
         //GIVEN
         Integer input = Integer.valueOf(42);
-        //THEN
+        //WHEN
         basicjunitexample.badAnswer(input);
+        //THEN exception is thrown
     }
     
     @Test
@@ -41,6 +42,7 @@ public class BasicJUnitExampleTest {
         //THEN
         Assert.assertEquals(input, result);
     }
+    
     @Test
     public void isTheUltimateAnswerWhenInputEqualsUltimateAnswer(){
         //GIVEN
@@ -48,7 +50,7 @@ public class BasicJUnitExampleTest {
         //WHEN
         Boolean result = basicjunitexample.isTheUltimateAnswer(input);
         //THEN
-        Assert.assertEquals(result, Boolean.TRUE);
+        Assert.assertTrue(result);
     }
     
     @Test
@@ -58,6 +60,6 @@ public class BasicJUnitExampleTest {
         //WHEN
         Boolean result = basicjunitexample.isTheUltimateAnswer(input);
         //THEN
-        Assert.assertEquals(result, Boolean.FALSE);
+        Assert.assertFalse(result);
     }
 }
